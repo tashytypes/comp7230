@@ -1,0 +1,5 @@
+from datetime import date, timedelta
+d= date
+d = date (2015, 1, 12)
+d + timedelta(15 * 7)
+# answer datetime.date(2015, 4, 27)
