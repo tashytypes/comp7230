@@ -1,0 +1,30 @@
+'''De Morgan's laws give us a way of simplifying logical expressions. Using them we can move negations into and out of brackets containing conjunctions and disjunctions.
+
+Use De Morgan's laws to push all the negations inside the brackets in lines 7 and 8 in the following code.'''
+
+x = True
+y = True
+z = False
+
+# TO DO: Use De Morgan's laws to push all negations inside the brackets
+# in lines 7 and 8 of the code. Do not change any other lines.
+a = (( x and y) or ( y))
+b = not((x or not z) and not(y or z))
+
+print(a)
+print(b)
+
+###########################################################################
+#                       Sample Solution
+
+x = True
+y = True
+z = False
+
+# TO DO: Use De Morgan's laws to push all negations inside the brackets
+# in lines 7 and 8 of the code. Do not change any other lines.
+a = x and y
+b = y or z
+
+print(a)
+print(b)

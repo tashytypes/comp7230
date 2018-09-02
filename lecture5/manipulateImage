@@ -1,0 +1,8 @@
+import matplotlib.pyplot as plt
+
+img = plt.imread("image.jpg")
+
+print("image is {0} - {1}".format(len(img[0]), len(img)))
+
+plt.imshow(img)
+plt.show()

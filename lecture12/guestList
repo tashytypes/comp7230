@@ -1,0 +1,37 @@
+guest_list = ["Homer", "Marge", "Lisa", "Bart", "Barney", "Ned"]
+guest_list.sort()
+# print (guest_list)
+
+# Is Person Invited?
+
+query = "Bart"
+invited = False
+
+for name in guest_list:
+    if name == query:
+        invited = True
+        break # breaks loop and iterates once if query is true
+
+if invited:
+    print ("{} is invited".format(query))
+
+else:
+    print("{} is not invited".format(query))
+# is Person invited using binary search
+lower_bound = 0
+upper_bound = len(guest_list) - 1
+
+while(upper_bound > lower_bound):
+    middle_index = int((upper_bound + lower_bound) / 2)
+    if (query > guest_list[middle_index]):
+        lower_bound = middle_index + 1  # looks at upper half rather than lower if that is where the query is
+    else:
+        upper_bound = middle_index
+
+invited = query == guest_list[(lower_bound)] # boolean query
+
+if invited:
+    print("{} is invited by binary search".format(query))
+
+else:
+    print("{} is not invited by binary search".format(query))
